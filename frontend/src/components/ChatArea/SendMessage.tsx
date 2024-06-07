@@ -5,7 +5,7 @@ import { RocketIcon } from '@radix-ui/react-icons'
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store";
 import { chatActions } from "../../store/slices/chat";
-import { sc } from '../../main';
+import { sc } from '../../App';
 
 const SendMessage = () => {
 

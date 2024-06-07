@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store";
 import { userActions } from "../../store/slices/user";
 import { chatActions } from "../../store/slices/chat";
-import { sc } from "../../main";
+import { sc } from "../../App";
 
 const customStyles = {
   content: {

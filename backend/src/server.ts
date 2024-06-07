@@ -1,10 +1,13 @@
 import express from "express";
 import { Server } from "socket.io";
+import { configDotenv } from "dotenv";
+
+configDotenv();
 
 const app = express();
 
-const expressServer = app.listen(3000, () => {
-  console.log('started listening on port 3000');
+const expressServer = app.listen(process.env.PORT, () => {
+  console.log('started listening on port '+ process.env.PORT);
 });
 
 const socketServer = new Server(expressServer, {

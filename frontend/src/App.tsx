@@ -10,7 +10,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { userActions } from "./store/slices/user";
 import { onMessageRecived } from "./store/middlewares/chat";
-import { sc } from "./main";
+import { io } from "socket.io-client";
+
+export const sc = io(import.meta.env.VITE_SOCKET_URI ?? '');
 
 Modal.setAppElement('#root');
 
@@ -48,7 +50,6 @@ function App() {
       }, 1000);
     }
   }, [currentUser, dispatch]);
-
   return (
     <>
       <div className={cn('flex')}>
