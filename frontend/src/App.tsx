@@ -47,7 +47,7 @@ function App() {
       clearTimeout(joinTimeoutId);
       joinTimeoutId = setTimeout(() => {
         sc.emit('joined', {...currentUser, socketId: sc?.id});
-      }, 1000);
+      }, 3000);
     }
   }, [currentUser, dispatch]);
   return (
